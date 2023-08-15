@@ -1,0 +1,130 @@
+/* Aqui basicamente estamos resetando as configurações ja pre-definidas pelo navegador e colocando 
+as minhas proprias regras na pagina */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* Quando se utilizar o " > " ele está indicando que o Header é filho do Body e que a aplicação só será feita no Header princiapal*/
+body > header{
+    background-color: gray;
+    padding: 16px 0;
+    color: aliceblue;
+}
+
+header .container {
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+header li {
+    display: inline;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+header li a {
+    color: aliceblue;
+    text-decoration: none;
+    margin-left: 16px;
+}
+
+.container {
+    width: 1366px;
+    margin: 0 auto 0 auto;
+}
+
+.articles{
+    /* Display vai deixar o conteudo ajustado dentro dimensão definida em .container */
+    display: flex;
+    /* Faz com que no caso as noticas dentro do articles, após ultrapassar 30% da largura definida, pule para a linha de baixo */
+    flex-wrap: wrap;
+    /* Deixa o espaço entre os artigos igualmente seprados*/
+    justify-content: space-between;
+}
+
+.articles article img {
+    /* Deixa a imagem dentro do padrão de 180px */
+  /*   height: 180px; */
+  width: 100%;
+}
+
+.articles article {
+    width: 30%;
+}
+
+section{
+    padding: 16px 0;
+}
+
+section h2,
+.articles article{
+    margin-bottom: 16px;
+}
+
+.articles article h3{
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.articles article a {
+    background-color: blue;
+    color: aliceblue;
+    padding: 8px;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+.articles article a:hover{
+    text-decoration: underline;
+}
+
+.articles article p,
+.articles article a {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.articles article h3{
+    font-size: 24px;
+}
+
+section h2{
+    font-size: 32px;
+}
+
+#sports {
+    background-color: rgba(0, 255, 0, 0.1);
+}
+
+#sports .articles article a{
+    background-color: #009432;
+}
+
+#economy {
+    background-color: #f8f59f;
+}
+
+#economy .articles article a{
+    background-color: #ff9f1a;
+}
+
+#entretenimento {
+    background-color: rgb(110, 50, 165);
+    color: rgb(245, 218, 218);
+}
+
+#entretenimento .articles article a{
+    background-color: rgb(174, 43, 226);
+}
+
+#tecnologia {
+    background-color: rgb(11, 2, 65);
+    color: rgb(245, 218, 218);
+}
+
+#tecnologia .articles article a{
+    background-color: rgb(56, 92, 192);
+}
